@@ -6,16 +6,26 @@
     <title>Variables Cheat Sheets</title>
 </head>
 <body>
-
     <p id="navn"></p>
-
+    <p id="alder"></p>
 
     <script>
+        // Min første variable
         const name = "Ayuub"
-
+        // Min første console.log()
         console.log(name)
-
+        //Min første utskrift
         document.getElementById("navn").innerHTML = name
-        </script
+        //Fødselsår
+        const birthYear = 2003
+        // År
+        let year = 2025
+        //Utregning av min alder basert på variable BirthYear og year
+        let age = year - birthYear
+
+        console.log(age)
+
+        document.getElementById("alder").innerHTML = age
+        </script>
 </body>
 </html>
