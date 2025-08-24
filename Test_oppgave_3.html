@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<p id="average"></p>
+
+<script>
+// Alder for hvert familiemedlem
+const father = 37;
+const mother = 32;
+const daughter = 7;
+const son = 2;
+
+// Regner ut summen av alle aldrene
+const total_age = father + mother + daughter + son;
+
+// Regner ut gjennomsnittet (sum delt på antall familiemedlemmer)
+const average_age = total_age / 4;
+
+// Skriver gjennomsnittsalderen ut i <p>-elementet med id "average"
+document.getElementById("average").innerHTML = "Gjennomsnittsalderen er " + average_age;
+</script>
+</html>
