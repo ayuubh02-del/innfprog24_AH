@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>gjennomsnittshøyden er <span id="average"></span>.</p>
+
+    <script>
+
+        const dad = 175
+        const mom = 162
+        const daughter = 120
+        const son = 95
+
+        const average_height = (dad+mom+daughter+son)/4
+
+        document.getElementById("average").innerHTML = average_height;
+
+    </script>
+
+</body>
+</html>

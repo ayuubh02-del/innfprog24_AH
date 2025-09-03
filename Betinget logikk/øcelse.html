@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>If-test oppgave</title>
+</head>
+<body>
+    <p id="resultat"></p>
+
+    <script>
+        // Variabel med ditt fornavn
+        let navn = "Ola"; // <-- bytt til ditt navn
+
+        // Variabel som skal fylles i if-testen
+        let utskrift;
+
+        // If-test som sjekker navnet
+        if (navn === "Ola") { // <-- bytt til ditt navn
+            utskrift = "Mitt navn er " + navn + " Nordmann"; // <-- skriv ditt etternavn her
+        } else {
+            utskrift = "Jeg heter ikke " + navn + " Nordmann";
+        }
+
+        // Skriver ut i <p>-tag
+        document.getElementById("resultat").innerText = utskrift;
+    </script>
+</body>
+</html>
