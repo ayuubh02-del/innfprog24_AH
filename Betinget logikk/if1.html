@@ -3,51 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arrays with objects - Cheat Sheet</title>
 </head>
 <body>
-    <!-- Her legger vi til en <ul> som JS kan fylle med <li>-elementene -->
+    <!-- HTML-element til utskrift -->
     <ul id="profiles"></ul>
 
     <script>
+        const profiles = document.getElementById("profiles");
+
         const lecturers = [
             {
                 name: "Marius Akerbæk",
-                office: "D1-015",
+                office: "D1-016",
                 email: "toremake@hiof.no",
                 birthyear: 1983,
+                courses: ["Innføring i programing", "Kommunikasjonsdesign", "UI Designprosjekt", "Utvikling av interaktive nettsider"]
             },
             {
-                name: "Daniel Blauhut",
+                name: "Daniela Blauhut",
                 office: "D1-015",
                 email: "danielb@hiof.no",
                 birthyear: 1977,
+                courses: ["Designmetoder", "Utvikling av interaktive nettsider"]
             },
             {
                 name: "Ann-Charlott Karlsen",
                 office: "D1-062",
                 email: "ackarlse@hiof.no",
                 birthyear: 1992,
+                courses: ["Webutvikling", "Utvikling av interaktive nettsider"]
             },
             {
-                name: "Ole Edvart Ørebæk", <!-- fjernet \d -->
-                office: "D1-016",
+                name: "Ole Edvard Ørebæk",
+                office: "D1-061A",
                 email: "oledvo@hiof.no",
                 birthyear: 1993,
+                courses: ["Innføring i datasikkerhet"]
             },
+            {
+                name: "Thor Andreas Holberg Murtnes-Hatlestad",
+                office: "Hjemmekontor",
+                email: "thoraho@hiof.no",
+                birthyear: 1990,
+                courses: ["Innføring i programming"]
+            }
         ];
 
-        const profiles = document.getElementById("profiles");
+        // Logg alle forelesere til konsollen
+        console.log("Alle forelesere:", lecturers);
 
-        // forEach er bedre enn map her, siden vi ikke returnerer en ny array
+        // Gå gjennom ALLE forelesere
         lecturers.forEach(lecturer => {
+            // Logg hver enkelt foreleser i konsollen
+            console.log("Foreleser:", lecturer.name, "| Alder:", 2025 - lecturer.birthyear, "| Kurs:", lecturer.courses);
+
+            // Lag en HTML-liste for kursene
+            let courseList = "<ul>";
+            lecturer.courses.forEach(course => {
+                courseList += `<li>${course}</li>`;
+            });
+            courseList += "</ul>";
+
+            // Skriv ut foreleser + kurs til nettsiden
             profiles.innerHTML += `
                 <li>
                     <h3>${lecturer.name}</h3>
+                    <span>Alder: ${2025 - lecturer.birthyear}</span>
                     <p>Kontor: ${lecturer.office}</p>
                     <a href="mailto:${lecturer.email}">Skriv e-post til ${lecturer.name}</a>
+                    <h4>Kurs:</h4>
+                    ${courseList}
                 </li>`;
-            console.log(lecturer);
         });
     </script>
 </body>
