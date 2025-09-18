@@ -34,8 +34,8 @@
             <a href="https://www.flaticon.com/free-icons/user" title="female icons">User icons created by Prosymbols Premium, Freepik, Smashicons, and Vectors Market - found at Flaticon</a>
         </p>
     </footer>
-
-    <scripttt>
+<!--feil nr.1 er at script var skrevet (scripttt), så jeg endret det til script.-->
+    <script>
         //Variabel with company name
         const company = "Programmeriet"
 
@@ -47,19 +47,27 @@
         ]
 
         //Secret keys to access url and images
-        let images_folder = "img
+
+    // feil nr.2 var at img var skrevet uten en slutt " (skrevet slik "img), så jeg endret det til "img".
+        let images_folder = "img"
         let secret_key = 0
         let ak_key
         
         //Turn on or off safeguard to allow system to run
-        const safeguard = false
+        
+        // bonus: måtte bytte false til true for at if testen skulle funke
+        const safeguard = true
         
         //Control of safeguard to create image folder name
         if(safeguard === true) {
             ak_key = secret_key + 1
         }
-        const safe_images_folder = images_folder += ak_key
-        console.logg("Image folder: " + safe_images_folder)
+
+    // feil nr.4 var at variablen ble avsluttet med ¨ og ikke med ;. så jeg fikset det.
+        const safe_images_folder = images_folder += ak_key;
+
+    // feil nr.3 console.log er skrevet med 2 g, så fikset det.
+        console.log("Image folder: " + safe_images_folder)
 
         let HTML_employees = ""
 
@@ -72,7 +80,8 @@
                     <p>${e.email}</p>
                 </article>`)
 
-                document.getElementbyId("employee_list").innerHTML = HTML_employeeees
+            // feil nr. 5 og 6, HTML_employees var skrevet med 4 e`er og getElementById var skrevet med liten b, så jeg fikset det for at koden skulle funke
+                document.getElementById("employee_list").innerHTML = HTML_employees
         }
 
         //System prints
