@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>betinget-logikk oppgave 1</title>
+</head>
+<body>
+    <p id="message"></p>
+   
+   <script>
+
+        const alder = 63;
+        let utskrift;
+
+        if(alder < 18){
+            utskrift = "Du er ikke myndig, du er " + alder + "år gammel!" 
+        } else if (alder > 18 && alder <= 62){
+            utskrift = "Du er myndig og klar for studier eller arbeidslivet. du er " + alder + "år gammel!"
+        } else {
+            utskrift = "Du er pensjonsklar!"
+        }
+
+        console.log(utskrift)
+
+        document.getElementById("message").innerHTML = utskrift;
+
+
+    </script>
+    
+</body>
+</html>

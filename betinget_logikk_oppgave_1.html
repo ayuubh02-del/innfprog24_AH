@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>betinget-logikk oppgave 1</title>
+</head>
+<body>
+
+    <p id="message"></p>
+
+    <script>
+
+        const name = "Ayuub";
+        let utskrift;
+
+        if(name === "Ayuub"){
+            utskrift = "Mitt navn er " + name + "!"
+        } else {
+            utskrift = "Mitt navn er ikke Ayuub, mitt navn er " + name + "!"
+        }
+
+        document.getElementById("message").innerHTML = utskrift
+
+    </script>
+</body>
+</html>
